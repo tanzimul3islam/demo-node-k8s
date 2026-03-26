@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-node
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-node
+  template:
+    metadata:
+      labels:
+        app: demo-node
+        policy-type: "app"
+    spec:
+      containers:
+        - name: demo-node
+          image: ghcr.io/tanzimul3islam/demo-node:v1.1.3
+          securityContext:
+            allowPrivilegeEscalation: false
+
+      restartPolicy: Always
+
+
