@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: demo-node
-          image: ghcr.io/tanzimul3islam/demo-node:v1.2.2
+          image: ghcr.io/tanzimul3islam/demo-node:v1.3.0
           securityContext:
             allowPrivilegeEscalation: false
 
